@@ -40,4 +40,31 @@ public class FakeStoreProductDto {
                 ", image='" + image + '\'' +
                 '}';
     }
+
+
+    public FakeStoreProductDto merge (FakeStoreProductDto fakeStoreProductDto, FakeStoreProductDto fsDTO){
+        if (null != fsDTO.getId()){
+            fakeStoreProductDto.setId(fsDTO.getId());
+        }
+        if (null != fsDTO.getTitle()){
+            fakeStoreProductDto.setTitle(fsDTO.getTitle());
+        }
+
+        if (null != (Double)fsDTO.getPrice()){
+            fakeStoreProductDto.setPrice(fsDTO.getPrice());
+        }
+
+        if (null != fsDTO.getDescription()){
+            fakeStoreProductDto.setDescription(fsDTO.getDescription());
+        }
+
+        if (null != fsDTO.getImage()){
+            fakeStoreProductDto.setImage(fsDTO.getImage());
+        }
+
+        if (null != fsDTO.getCategory()){
+            fakeStoreProductDto.setCategory(fsDTO.getCategory());
+        }
+        return fakeStoreProductDto;
+     }
 }
